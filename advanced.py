@@ -19,12 +19,12 @@ def send_message(message):
     response = completion.choices[0].message.content
 
     messages.append({"role": "assistant", "content": response})
-    print(response)
+    return response
 
 def main():
     while True:
         message = input()
-        send_message(message)
+        print(send_message(message))
 
 if __name__ == "__main__":
     main()
