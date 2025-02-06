@@ -16,11 +16,12 @@ def on_press(key):
         if key.char == 'p':
             take_screenshot()
             image = encode_image("monitor-1.png")
+            text = input("Text: ")
 
             response = send_message([
                 {
                     "type": "text", 
-                    "text": "Kannst du bitte die Aufgaben auf dem Screenshot beantworten?"
+                    "text": text
                 },
                 {
                     "type": "image_url",
